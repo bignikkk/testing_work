@@ -1,0 +1,13 @@
+---
+- name: Ensure docker-compose is installed on Linux
+  apt:
+    name: docker-compose
+    state: present
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Ensure docker-compose is installed on macOS
+  homebrew:
+    name: docker-compose
+    state: present
+  become: false
+  when: ansible_facts['os_family'] == "Darwin"

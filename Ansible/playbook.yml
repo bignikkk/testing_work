@@ -1,0 +1,15 @@
+---
+- name: Setup and Deploy Dockerized Application
+  hosts: webservers
+  become: true
+
+  roles:
+    - docker
+    - docker_compose
+    - nginx_setup
+
+  tasks:
+    - name: Start docker containers
+      shell: docker-compose up -d
+      args:
+        chdir: "{{ playbook_dir }}"

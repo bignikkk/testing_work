@@ -1,0 +1,5 @@
+---
+- name: Restart Nginx
+  shell: docker-compose restart nginx
+  args:
+    chdir: "{{ playbook_dir }}"
