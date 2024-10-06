@@ -16,7 +16,7 @@ Ansible
 ### Как развернуть проект локально:
 
 ```
-git clone https://github.com/bignikkk/kitty_service
+git clone https://github.com/bignikkk/testing_work
 ```
 
 ```
@@ -69,7 +69,7 @@ ansible-playbook -i ansible/inventory.ini ansible/playbook.yml --ask-become-pass
 ```
 [webservers]
 your_server_ip ansible_user=your_username
-```
+``` 
 
 Убедитесь, что у вас установлен Docker и Docker Compose. Если их нет, установите их:
 
